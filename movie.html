@@ -1,0 +1,58 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="movie.css">
+
+</head>
+
+<body>
+<script >
+function getmov(titel) { 
+    $.ajax({ 
+        type: "GET",
+        dataType: "json",
+        url: "http://www.omdbapi.com/?t= &y=" + titel,
+        success: function(data){
+            return data.Poster; 
+        },
+        async:false,
+        error: function() {
+            return "Movi not found.";
+        }
+    });
+}
+
+</script>
+
+<div id="header">
+
+<h3>Search for movies here</h3>
+
+</div>
+
+<div class ="form">
+<form method="POST" onsubmit="movie.js">
+    <p>Enter movie name here</p>
+        <input type="text" name="movie" value="" />
+        <br>
+     <p>Enter the year of release</p>
+        <input type="text" name="year" value="" />
+    <br>
+    <br>
+   <button type="button" onclick="getmov()">Search</button>
+</form>
+
+</div>
+
+<div id="container">
+    <h3 class="title">Title</h3>
+    <p class="plot">Plot</p>
+    <span class="poster">Poster</span>
+    <span class="year">Year</span>
+
+	
+
+</div>
+
+
+</body>
+</html>
