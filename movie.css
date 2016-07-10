@@ -1,0 +1,45 @@
+body{
+
+
+background-color:#558C89;
+margin: 0px;
+font-family:verdana,Arial;
+font-size: 14px;
+
+}
+
+#header{
+
+
+margin: 10px;
+height: 100px;
+border-radius:5px;
+}
+
+.form{
+margin-left: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right: 10px;
+font-size:110%;
+padding: 20px;
+border-radius:5px;
+float:right;
+width:250px;
+clear:right;
+}
+
+h3{
+font-size:250%;
+margin:0;
+text-align:center;
+color:#e5e4d7;
+font-family:Georgia,Arial;
+position:relative;
+top:50%;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+
+
